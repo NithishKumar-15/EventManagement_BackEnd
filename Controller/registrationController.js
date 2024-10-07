@@ -1,7 +1,7 @@
 import { db } from "../DB/dbconnection.js";
 import bcrypt from "bcrypt"; 
 
-const userCollection=db.collection("Users");
+const userCollection=db.collection(process.env.DBUSER);
 
 const registrationController=async(req,res)=>{
     try{
